@@ -20,7 +20,7 @@ function take_snapshot()
 }
 
 console.log("ml5.version",ml5.version) ;
-classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/Pu7U9yKGS/model.json",modelLoded)
+classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/_dw3bOXFH/model.json",modelLoded)
 
 function modelLoded()
 {
@@ -54,17 +54,17 @@ function got_results(error,results)
         document.getElementById("result_emotion_name").innerHTML = results[0].label;
         prediction_1 = results[0].label;
 
-        if(results[0].label == "Happy")
+        if(results[0].label == "Best")
         {
-            document.getElementById("update_emoji").innerHTML = "&#128522;" ;
+            document.getElementById("update_emoji").innerHTML = "&#128077;" ;
         }
-        if(results[0].label == "Sad")
+        if(results[0].label == "Amazing")
         {
-            document.getElementById("update_emoji").innerHTML = "&#128532;" ;
+            document.getElementById("update_emoji").innerHTML = "&#128076;" ;
         }
-        if(results[0].label == "Angry")
+        if(results[0].label == "Victory")
         {
-            document.getElementById("update_emoji").innerHTML = "&#128545;" ;
+            document.getElementById("update_emoji").innerHTML = "&#9996;" ;
         }
     }
 }
